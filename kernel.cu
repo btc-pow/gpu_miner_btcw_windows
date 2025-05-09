@@ -65,7 +65,7 @@ int main(int argc, char* argv[]) {
     cuCtxCreate(&cuContext, 0, cuDevice);
 
     // Load the PTX module
-    CUresult res = cuModuleLoad(&cuModule, "./kernel.ptx");
+    CUresult res = cuModuleLoad(&cuModule, "kernel.ptx");
     if (res != CUDA_SUCCESS) {
         std::cerr << "Failed to load PTX\n";
         return 1;
